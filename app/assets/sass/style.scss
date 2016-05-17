@@ -1,0 +1,27 @@
+@import "lib/normalize";
+@import "lib/rem";
+@import "lib/unsemantic-grid-responsive-tablet";
+@import "partials/fonts";
+@import "partials/config";
+
+/** apps scss files **/
+@import "modules/header";
+@import "modules/footer";
+@import "modules/overlay";
+
+// ----------------------------------------------------
+// 1. GENERAL SETTINGS
+// ----------------------------------------------------
+
+html{ 
+	font-size: 1em;// font-size: 16px;
+}
+
+
+
+
+
+
+
+
+

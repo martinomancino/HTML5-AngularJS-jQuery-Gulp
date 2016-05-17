@@ -1,0 +1,35 @@
+/* ================================================================== */
+/* This file has a mobile-to-tablet, and tablet-to-desktop breakpoint */
+/* ================================================================== */
+
+$media-mobile-max: 600px !default;
+$media-tablet-mini-min: 601px !default;
+$media-tablet-mini-max: 680px !default;
+$media-tablet-min: 681px !default;
+$media-tablet-max: 768px !default;
+$media-desktop-min: 769px !default;
+
+@import "unsemantic-vars";
+
+@include unsemantic-grid-placeholders;
+@include unsemantic-grid-base-tablet;
+
+@media screen and (max-width: $media-mobile-max) {
+  @include unsemantic-grid-placeholders(mobile);
+  @include unsemantic-grid-scoped(mobile);
+}
+
+@media screen and (min-width: $media-tablet-mini-min) and (max-width: $media-tablet-mini-max) {
+  @include unsemantic-grid-placeholders(tabletmini);
+  @include unsemantic-grid-scoped(tabletmini);
+}
+
+@media screen and (min-width: $media-tablet-min) and (max-width: $media-tablet-max) {
+  @include unsemantic-grid-placeholders(tablet);
+  @include unsemantic-grid-scoped(tablet);
+}
+
+@media screen and (min-width: $media-desktop-min) {
+  @include unsemantic-grid-placeholders(desktop);
+  @include unsemantic-grid-scoped(desktop);
+}
